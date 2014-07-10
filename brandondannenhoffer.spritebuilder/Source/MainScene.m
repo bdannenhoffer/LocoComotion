@@ -10,4 +10,11 @@
 
 @implementation MainScene
 
+
+
+-(void)play{
+    CCScene *levelSelection = [CCBReader loadAsScene:@"LevelSelectionScene"];
+    [[CCDirector sharedDirector] replaceScene:levelSelection];
+    
+}
 @end

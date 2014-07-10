@@ -10,4 +10,15 @@
 
 @implementation LevelSelectionScene
 
+-(void)levelOne{
+    CCScene *gameplayScene = [CCBReader loadAsScene:@"Gameplay"];
+    [[CCDirector sharedDirector] replaceScene:gameplayScene];
+
+}
+
+-(void)back{
+    CCScene *mainScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene:mainScene];
+}
+
 @end
