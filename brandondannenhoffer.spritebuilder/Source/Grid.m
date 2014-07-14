@@ -8,26 +8,27 @@
 
 #import "Grid.h"
 
+const NSInteger GRID_COLUMNS = 14;
+const NSInteger GRID_ROWS = 10;
+
 @implementation Grid{
-    NSMutableArray *_gridArray;
     float _cellWidth;
     float _cellHeight;
     
 }
-static const NSInteger GRID_COLUMNS = 14;
-static const NSInteger GRID_ROWS = 10;
+
+
 
 -(void)didLoadFromCCB{
+    self.gridArray = [NSMutableArray array];
     [self setUpGrid];
 }
 
--(void)setUpGrid{
+-(void) setUpGrid{
     //sets the width and height of the cells
     _cellWidth = self.contentSize.width / GRID_COLUMNS;
     _cellHeight = self.contentSize.height / GRID_ROWS;
     
-    //creates an empty array
-    _gridArray = [NSMutableArray array];
     
     float x = 0;
     float y = 0;
@@ -35,10 +36,14 @@ static const NSInteger GRID_ROWS = 10;
     for (int i = 0; i < GRID_ROWS; i++){
         //iterates through each row
         x = 0;
+        self.gridArray[i] = [NSMutableArray array];
         for (int j = 0; j < GRID_COLUMNS; j++){
-            CCNode *_backgroundCell;
-            _backgroundCell.contentSize = CGSizeMake(_cellHeight, _cellWidth);
-            _backgroundCell.position = ccp(x, y);
+//            CCNodeColor *_backgroundCell = [CCNodeColor nodeWithColor:[CCColor grayColor]];
+//            _backgroundCell.contentSize = CGSizeMake(_cellHeight-1, _cellWidth-1);
+//            _backgroundCell.position = ccp(x+1, y+1);
+//            [self addChild:_backgroundCell];
+            self.gridArray[i][j] = [NSMutableArray array];
+            self.gridArray[i][j] = [NSValue valueWithCGPoint:ccp(x+16, y+16)];
             x += _cellHeight;
         }
         y += _cellWidth;

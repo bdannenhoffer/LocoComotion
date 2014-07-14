@@ -10,4 +10,9 @@
 
 @interface Grid : CCNode
 
+extern const NSInteger GRID_COLUMNS;
+extern const NSInteger GRID_ROWS;
+@property (nonatomic, strong) NSMutableArray *gridArray;
+
+
 @end

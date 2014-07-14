@@ -36,6 +36,7 @@
 		B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
+		F11A387619702ECB00866ABC /* PauseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A387519702ECB00866ABC /* PauseMenu.m */; };
 		F18FA54E196D87C5009CAC97 /* LevelSelectionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */; };
 		F18FA559196DE5B3009CAC97 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = F18FA558196DE5B3009CAC97 /* Gameplay.m */; };
 		F1992A93196EF3E200BD4CEF /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = F1992A92196EF3E200BD4CEF /* Grid.m */; };
@@ -93,6 +94,8 @@
 		B77F1B3F17B978D7009739AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B77F1B4117B978D7009739AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
+		F11A387419702ECB00866ABC /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseMenu.h; path = Source/PauseMenu.h; sourceTree = "<group>"; };
+		F11A387519702ECB00866ABC /* PauseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PauseMenu.m; path = Source/PauseMenu.m; sourceTree = "<group>"; };
 		F18FA54C196D87C5009CAC97 /* LevelSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelectionScene.h; path = Source/LevelSelectionScene.h; sourceTree = "<group>"; };
 		F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelSelectionScene.m; path = Source/LevelSelectionScene.m; sourceTree = "<group>"; };
 		F18FA557196DE5B3009CAC97 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 				F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */,
 				F18FA557196DE5B3009CAC97 /* Gameplay.h */,
 				F18FA558196DE5B3009CAC97 /* Gameplay.m */,
+				F11A387419702ECB00866ABC /* PauseMenu.h */,
+				F11A387519702ECB00866ABC /* PauseMenu.m */,
 				F1992A91196EF3E200BD4CEF /* Grid.h */,
 				F1992A92196EF3E200BD4CEF /* Grid.m */,
 			);
@@ -357,6 +362,7 @@
 			files = (
 				F18FA54E196D87C5009CAC97 /* LevelSelectionScene.m in Sources */,
 				F1992A93196EF3E200BD4CEF /* Grid.m in Sources */,
+				F11A387619702ECB00866ABC /* PauseMenu.m in Sources */,
 				F18FA559196DE5B3009CAC97 /* Gameplay.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
