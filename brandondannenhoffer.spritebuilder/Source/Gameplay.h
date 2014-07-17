@@ -7,7 +7,10 @@
 //
 
 #import "CCScene.h"
+#import "Grid.h"
 
 @interface Gameplay : CCScene
+
+@property (nonatomic, strong) Grid *grid;
 
 @end

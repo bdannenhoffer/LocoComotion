@@ -37,6 +37,9 @@
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		F11A387619702ECB00866ABC /* PauseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A387519702ECB00866ABC /* PauseMenu.m */; };
+		F121EF1A1976E5AA00FCD686 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = F121EF191976E5AA00FCD686 /* Level.m */; };
+		F121EF1D1977033100FCD686 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = F121EF1C1977033100FCD686 /* Tile.m */; };
+		F121EF21197704B300FCD686 /* TerrainTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F121EF20197704B300FCD686 /* TerrainTile.m */; };
 		F18FA54E196D87C5009CAC97 /* LevelSelectionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */; };
 		F18FA559196DE5B3009CAC97 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = F18FA558196DE5B3009CAC97 /* Gameplay.m */; };
 		F1992A93196EF3E200BD4CEF /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = F1992A92196EF3E200BD4CEF /* Grid.m */; };
@@ -96,6 +99,12 @@
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
 		F11A387419702ECB00866ABC /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseMenu.h; path = Source/PauseMenu.h; sourceTree = "<group>"; };
 		F11A387519702ECB00866ABC /* PauseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PauseMenu.m; path = Source/PauseMenu.m; sourceTree = "<group>"; };
+		F121EF181976E5AA00FCD686 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = Source/Level.h; sourceTree = "<group>"; };
+		F121EF191976E5AA00FCD686 /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Level.m; path = Source/Level.m; sourceTree = "<group>"; };
+		F121EF1B1977033100FCD686 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tile.h; path = Source/Tile.h; sourceTree = "<group>"; };
+		F121EF1C1977033100FCD686 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tile.m; path = Source/Tile.m; sourceTree = "<group>"; };
+		F121EF1F197704B300FCD686 /* TerrainTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerrainTile.h; path = Source/TerrainTile.h; sourceTree = "<group>"; };
+		F121EF20197704B300FCD686 /* TerrainTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerrainTile.m; path = Source/TerrainTile.m; sourceTree = "<group>"; };
 		F18FA54C196D87C5009CAC97 /* LevelSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelectionScene.h; path = Source/LevelSelectionScene.h; sourceTree = "<group>"; };
 		F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelSelectionScene.m; path = Source/LevelSelectionScene.m; sourceTree = "<group>"; };
 		F18FA557196DE5B3009CAC97 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
@@ -137,6 +146,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F121EF1E1977046000FCD686 /* Tiles */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
@@ -149,6 +159,8 @@
 				F11A387519702ECB00866ABC /* PauseMenu.m */,
 				F1992A91196EF3E200BD4CEF /* Grid.h */,
 				F1992A92196EF3E200BD4CEF /* Grid.m */,
+				F121EF181976E5AA00FCD686 /* Level.h */,
+				F121EF191976E5AA00FCD686 /* Level.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -237,6 +249,17 @@
 				B73789861807631A0076A88C /* Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F121EF1E1977046000FCD686 /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+				F121EF1B1977033100FCD686 /* Tile.h */,
+				F121EF1C1977033100FCD686 /* Tile.m */,
+				F121EF1F197704B300FCD686 /* TerrainTile.h */,
+				F121EF20197704B300FCD686 /* TerrainTile.m */,
+			);
+			name = Tiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F18FA54E196D87C5009CAC97 /* LevelSelectionScene.m in Sources */,
+				F121EF1D1977033100FCD686 /* Tile.m in Sources */,
 				F1992A93196EF3E200BD4CEF /* Grid.m in Sources */,
+				F121EF21197704B300FCD686 /* TerrainTile.m in Sources */,
+				F121EF1A1976E5AA00FCD686 /* Level.m in Sources */,
 				F11A387619702ECB00866ABC /* PauseMenu.m in Sources */,
 				F18FA559196DE5B3009CAC97 /* Gameplay.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
@@ -428,7 +454,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Claire Treyz (5SCJ4W979S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -450,7 +476,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = brandondannenhoffer;
-				PROVISIONING_PROFILE = "MGWU New York City";
+				PROVISIONING_PROFILE = "6E1998EB-320D-4966-B4C9-853B315A4F94";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -462,7 +488,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Claire Treyz (5SCJ4W979S)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -482,7 +508,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = brandondannenhoffer;
-				PROVISIONING_PROFILE = "MGWU New York City";
+				PROVISIONING_PROFILE = "6E1998EB-320D-4966-B4C9-853B315A4F94";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

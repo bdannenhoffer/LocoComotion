@@ -42,7 +42,7 @@ const NSInteger GRID_ROWS = 10;
 //            _backgroundCell.contentSize = CGSizeMake(_cellHeight-1, _cellWidth-1);
 //            _backgroundCell.position = ccp(x+1, y+1);
 //            [self addChild:_backgroundCell];
-            self.gridArray[i][j] = [NSMutableArray array];
+//            self.gridArray[i][j] = [NSMutableArray array];
             self.gridArray[i][j] = [NSValue valueWithCGPoint:ccp(x+16, y+16)];
             x += _cellHeight;
         }

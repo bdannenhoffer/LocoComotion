@@ -8,19 +8,25 @@
 
 #import "Gameplay.h"
 #import "Grid.h"
+#import "Level.h"
+#import "TerrainTile.h"
 
 @implementation Gameplay{
     CCNode *_contentNode;
-    Grid *_grid;
     CCNode *_spawnArea1;
     CCNode *_spawnArea2;
     CCNode *_spawnArea3;
+    CCNode *_selectedTile;
+    CCNode *_newTile;
+    
     CCSprite *_trackTile1;
     CCSprite *_trackTile2;
     CCSprite *_trackTile3;
-    CCNode *_selectedTile;
-    CCNode *_newTile;
+    
     CCLabelTTF *_countdownLabel;
+    
+    Level *_level;
+    TerrainTile *_terrainTile;
     
     float time;
 }
@@ -51,6 +57,9 @@
     _trackTile1.position = ccp(32, 32);
     _trackTile2.position = ccp(32, 32);
     _trackTile3.position = ccp(32, 32);
+    
+    _level.gameplay = self;
+    [_level displayLevel];
 }
 
 -(void)update:(CCTime)delta{
