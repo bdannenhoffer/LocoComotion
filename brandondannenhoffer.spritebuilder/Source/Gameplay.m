@@ -29,6 +29,8 @@
     TerrainTile *_terrainTile;
     
     float time;
+    
+    int spawn;  //keeps track of which spawn area the selected tile came from
 }
 
 - (id)init
@@ -124,11 +126,14 @@
     _selectedTile.scaleY = .5;
 }
 
-//snaps the selected tile to the grid and resets it once the player lets go
+//snaps the selected tile to the grid and resets it once the player lets go.  If the location is not valid or the tile is occupied, then the tile gets sent back to its original node.
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
-    [self snapTileToPosition:touch];
-    _selectedTile = nil;
-
+    
+    Tile *checkedTile = [_level findTileInCell:touch];
+    if (checkedTile.occupiable == YES && _selectedTile.position.x > 120){
+        [self snapTileToPosition:touch];
+        _selectedTile = nil;
+    }
 }
 
 //when a tile is dragged onto the play area it is snapped into position by moving the tile to the cell's location

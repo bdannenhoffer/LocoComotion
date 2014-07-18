@@ -13,21 +13,20 @@
 
 @implementation Level{
     TerrainTile *_terrainTile;
-    NSMutableArray *levelArray;
 }
 
 -(void)didLoadFromCCB{
-    levelArray = [NSMutableArray array];
+    self.levelArray = [NSMutableArray array];
     [self createLevel];
 //    [self displayLevel];
 }
 
 -(void)createLevel{
     for (int i = 0; i < GRID_ROWS; i++){
-        levelArray[i] = [NSMutableArray array];
+        self.levelArray[i] = [NSMutableArray array];
         for (int j = 0; j < GRID_COLUMNS; j++){
-            _terrainTile = [CCBReader load:@"LocoComotion tiles/EmptyTerrain"];
-            levelArray[i][j] = _terrainTile;
+            _terrainTile = (TerrainTile*)[CCBReader load:@"LocoComotion tiles/EmptyTerrain"];
+            self.levelArray[i][j] = _terrainTile;
         }
     }
 }
@@ -37,7 +36,7 @@
         for (int j = 0; j < GRID_COLUMNS; j++){
             NSValue *cell = self.gameplay.grid.gridArray[i][j];
             CGPoint cellPosition = [cell CGPointValue];
-            _terrainTile = levelArray[i][j];
+            _terrainTile = self.levelArray[i][j];
             [self addChild:_terrainTile];
             _terrainTile.positionInPoints = cellPosition;
             
@@ -46,6 +45,13 @@
     }
 }
 
-//-(NSObject)
+-(Tile*)findTileInCell:(UITouch*)touch{
+    CGPoint touchLocation = [touch locationInNode: self.gameplay.grid];
+    
+    int cellPointX = abs(touchLocation.x / 32);
+    int cellPointY = abs(touchLocation.y / 32);
+    
+    return self.levelArray[cellPointY][cellPointX];
+}
   
 @end

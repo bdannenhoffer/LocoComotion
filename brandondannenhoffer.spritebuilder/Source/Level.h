@@ -8,11 +8,14 @@
 
 #import "CCScene.h"
 @class Gameplay;
+@class Tile;
 
 @interface Level : CCNode
 
 @property (nonatomic, weak) Gameplay *gameplay;
+@property (nonatomic, strong) NSMutableArray *levelArray;
 
 -(void)displayLevel;
+-(Tile*)findTileInCell:(UITouch*)touch;
 
 @end

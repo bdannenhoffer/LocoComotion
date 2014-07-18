@@ -11,5 +11,9 @@
 @interface Tile : CCSprite
 
 @property (nonatomic, assign) BOOL occupiable;
+@property (nonatomic, assign) BOOL nextRouteLeft;
+@property (nonatomic, assign) BOOL nextRouteRight;
+@property (nonatomic, assign) BOOL nextRouteBottom;
+@property (nonatomic, assign) BOOL nextRouteTop;
 
 @end

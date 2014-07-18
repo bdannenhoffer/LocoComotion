@@ -12,6 +12,10 @@
 
 -(void)didLoadFromCCB{
     self.occupiable = YES;
+    self.nextRouteLeft = NO;
+    self.nextRouteRight = NO;
+    self.nextRouteBottom = NO;
+    self.nextRouteTop = NO;
 }
 
 @end
