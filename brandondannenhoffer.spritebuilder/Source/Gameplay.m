@@ -9,7 +9,22 @@
 #import "Gameplay.h"
 #import "Grid.h"
 #import "Level.h"
+
+#import "train.h"
+
+#import "Tile.h"
+#import "Obstacle.h"
+
+#import "TrainTrack.h"
+#import "CrossTile.h"
+#import "UpAndDownTile.h"
+#import "LeftToBottomTile.h"
+#import "LeftToRightTile.h"
+#import "RightToBottomTile.h"
+#import "TopToLeftTile.h"
+#import "TopToRightTile.h"
 #import "TerrainTile.h"
+
 
 @implementation Gameplay{
     CCNode *_contentNode;
@@ -23,14 +38,13 @@
     CCSprite *_trackTile2;
     CCSprite *_trackTile3;
     
+    Train *_train;
+    
     CCLabelTTF *_countdownLabel;
     
     Level *_level;
-    TerrainTile *_terrainTile;
     
-    float time;
-    
-    int spawn;  //keeps track of which spawn area the selected tile came from
+    float timer;
 }
 
 - (id)init
@@ -39,9 +53,8 @@
     {
         self.userInteractionEnabled = TRUE;
 
-        time = 15;
-        _countdownLabel.string = [NSString stringWithFormat:@"%d", abs(ceil(time))];
-       
+        timer = 5;
+        _countdownLabel.string = [NSString stringWithFormat:@"%d", abs(ceil(timer))];
     }
     return self;
 }
@@ -62,17 +75,20 @@
     
     _level.gameplay = self;
     [_level displayLevel];
+
+    _train = (Train*)[CCBReader load:@"Train"];
+    _train.scaleX = 0.5;
+    _train.scaleY = 0.5;
+    [_grid addChild:_train];
+    _train.position = ccp(10, 75);
+    _train.levelArray = _level.levelArray;
+    _train.cellHeight = _grid.cellHeight;
+    _train.cellWidth = _grid.cellWidth;
 }
 
--(void)update:(CCTime)delta{
-    _countdownLabel.string = [NSString stringWithFormat:@"%d", abs(ceil(time))];
-    time -= delta;
-    
-//    if (abs(time) == 0)
-//    {
-//        NSLog(@"Train has left");
-//    }
-}
+//-(void)update:(CCTime)delta{
+//    
+//}
 
 #pragma mark Touch and Tile Controls
 
@@ -81,7 +97,7 @@
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     CGPoint touchLocation = [touch locationInWorld];
     
-    if(CGRectContainsPoint([_spawnArea1 boundingBox], touchLocation)){
+    if (CGRectContainsPoint([_spawnArea1 boundingBox], touchLocation)){
         _selectedTile = _trackTile1;
         [_spawnArea1 removeChild:_selectedTile];
         [self addChild: _selectedTile];
@@ -92,7 +108,7 @@
          _trackTile1.position = ccp(32, 32);
     }
     
-    if(CGRectContainsPoint([_spawnArea2 boundingBox], touchLocation)){
+    if (CGRectContainsPoint([_spawnArea2 boundingBox], touchLocation)){
         _selectedTile = _trackTile2;
         [_spawnArea2 removeChild:_selectedTile];
         [self addChild: _selectedTile];
@@ -104,7 +120,7 @@
         
     }
     
-    if(CGRectContainsPoint([_spawnArea3 boundingBox], touchLocation)){
+    if (CGRectContainsPoint([_spawnArea3 boundingBox], touchLocation)){
         _selectedTile = _trackTile3;
         [_spawnArea3 removeChild:_selectedTile];
         [self addChild: _selectedTile];
@@ -115,6 +131,24 @@
         _trackTile3.position = ccp(32, 32);
         
     }
+    
+    //Checks to see if there is a train track in the touch position and deletes it
+//    if (CGRectContainsPoint([_level boundingBox], touchLocation)){
+//        
+//        float cellPositionX = touchLocation.x / 32;
+//        float cellPositionY = touchLocation.y / 32;
+//        
+//        if ([_level.levelArray[abs(cellPositionX)][abs(cellPositionY)] isKindOfClass:[TrainTrack class]]){
+//            
+//            _selectedTile = _level.levelArray[abs(cellPositionY)][abs(cellPositionX)];
+//            [_selectedTile removeFromParent];
+//            
+//            TerrainTile *_terrainTile = [CCBReader load:@"LocoComotion tiles/EmptyTerrain"];
+//            [[_level.levelArray objectAtIndex:abs(cellPositionY)]replaceObjectAtIndex:abs(cellPositionX) withObject:_terrainTile];
+//            
+//            _selectedTile = nil;
+//        }
+//    }
     
 }
 
@@ -130,7 +164,7 @@
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
     
     Tile *checkedTile = [_level findTileInCell:touch];
-    if (checkedTile.occupiable == YES && _selectedTile.position.x > 120){
+    if (checkedTile.occupiable == YES && _selectedTile != nil){
         [self snapTileToPosition:touch];
         _selectedTile = nil;
     }
@@ -148,10 +182,19 @@
         for (int j = 0; j < GRID_ROWS; j++){
             if (cellPositionY >= j && cellPositionY < j+1 && cellPositionX >= i && cellPositionX < i+1){
                 NSValue *cell = _grid.gridArray[j][i];
-                CGPoint cellPoint = [_grid convertToWorldSpace:[cell CGPointValue]];  //Converts point value from the world to the _grid node
-                _selectedTile.positionInPoints = cellPoint;
+                
+                //Converts point value from the world to the _grid node
+                CGPoint cellPoint = [_grid convertToWorldSpace:[cell CGPointValue]];
+                _selectedTile.positionInPoints = [_level convertToNodeSpace:cellPoint];
+                
+                [_selectedTile removeFromParent];
+                [_level addChild:_selectedTile];
+                //replaces the terrain tile with the track in the level array
+                [[_level.levelArray objectAtIndex:cellPositionY]replaceObjectAtIndex:cellPositionX withObject:_selectedTile];
             }
         }
+    //[_train moveTrain:_level.levelArray];
+
 }
 
 #pragma mark Gameplay
@@ -162,26 +205,26 @@
     
     switch (num)
     {
+//        case 0:
+//            _newTile = (CrossTile*)[CCBReader load:@"LocoComotion tiles/CrossTile"];
+//            break;
         case 0:
-            _newTile = [CCBReader load:@"LocoComotion tiles/CrossTile"];
+            _newTile = (LeftToBottomTile*)[CCBReader load:@"LocoComotion tiles/LeftToBottomTile"];
             break;
         case 1:
-            _newTile = [CCBReader load:@"LocoComotion tiles/LeftToBottomTile"];
+            _newTile = (LeftToRightTile*)[CCBReader load:@"LocoComotion tiles/LeftToRightTile"];
             break;
         case 2:
-            _newTile = [CCBReader load:@"LocoComotion tiles/LeftToRightTile"];
+            _newTile = (RightToBottomTile*)[CCBReader load:@"LocoComotion tiles/RightToBottomTile"];
             break;
         case 3:
-            _newTile = [CCBReader load:@"LocoComotion tiles/RightToBottomTile"];
+            _newTile = (TopToLeftTile*)[CCBReader load:@"LocoComotion tiles/TopToLeftTile"];
             break;
         case 4:
-            _newTile = [CCBReader load:@"LocoComotion tiles/TopToLeftTile"];
+            _newTile = (TopToRightTile*)[CCBReader load:@"LocoComotion tiles/TopToRightTile"];
             break;
         case 5:
-            _newTile = [CCBReader load:@"LocoComotion tiles/TopToRightTile"];
-            break;
-        case 6:
-            _newTile = [CCBReader load:@"LocoComotion tiles/UpAndDownTile"];
+            _newTile = (UpAndDownTile*)[CCBReader load:@"LocoComotion tiles/UpAndDownTile"];
             break;
     }
     _newTile.position = ccp(0,0);
@@ -193,6 +236,11 @@
 -(void)pause{
     CCScene *pauseScene = [CCBReader loadAsScene:@"PauseMenu"];
     [[CCDirector sharedDirector] pushScene:pauseScene];
+}
+
+-(void)launchTrain{
+    [_train moveTrain:_level.levelArray];
+    
 }
 
 @end

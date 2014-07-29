@@ -13,6 +13,8 @@
 extern const NSInteger GRID_COLUMNS;
 extern const NSInteger GRID_ROWS;
 @property (nonatomic, strong) NSMutableArray *gridArray;
+@property (nonatomic, assign) float cellWidth;
+@property (nonatomic, assign) float cellHeight;
 
 
 @end

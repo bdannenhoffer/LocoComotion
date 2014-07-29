@@ -10,4 +10,6 @@
 
 @interface NoTile : Tile
 
++(NoTile*)makeNoTile;
+
 @end

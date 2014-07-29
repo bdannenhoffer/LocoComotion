@@ -10,4 +10,10 @@
 
 @interface Train : CCSprite
 
+@property (nonatomic,strong) NSMutableArray *levelArray;
+@property (nonatomic, assign) float cellWidth;
+@property (nonatomic, assign) float cellHeight;
+
+-(void)moveTrain:(NSMutableArray*)level;
+
 @end

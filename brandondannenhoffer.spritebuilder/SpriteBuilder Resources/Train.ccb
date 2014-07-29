@@ -40,7 +40,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>LeftToRightTile</string>
+		<string>Train</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -103,7 +103,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>LocoComotion tiles/roadTile6.png</string>
+					<string>ccbResources/car_cop_small@4x.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -117,6 +117,17 @@
 					<real>1</real>
 					<real>1</real>
 					<real>1</real>
+				</array>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>flip</string>
+				<key>type</key>
+				<string>Flip</string>
+				<key>value</key>
+				<array>
+					<true/>
+					<false/>
 				</array>
 			</dict>
 		</array>
@@ -171,7 +182,7 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>2</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>

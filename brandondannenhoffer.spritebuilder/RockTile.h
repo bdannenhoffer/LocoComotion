@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "Tile.h"
+#import "Obstacle.h"
 
-@interface RockTile : Tile
+@interface RockTile : Obstacle
 
 @end

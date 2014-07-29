@@ -10,4 +10,15 @@
 
 @implementation NoTile
 
++(NoTile*)makeNoTile{
+    NoTile *tileless;
+    tileless.occupiable = NO;
+    tileless.nextRouteLeft = NO;
+    tileless.nextRouteRight = NO;
+    tileless.nextRouteBottom = NO;
+    tileless.nextRouteTop = NO;
+    
+    return  tileless;
+}
+
 @end

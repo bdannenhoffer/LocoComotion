@@ -12,9 +12,6 @@ const NSInteger GRID_COLUMNS = 14;
 const NSInteger GRID_ROWS = 10;
 
 @implementation Grid{
-    float _cellWidth;
-    float _cellHeight;
-    
 }
 
 
@@ -38,11 +35,6 @@ const NSInteger GRID_ROWS = 10;
         x = 0;
         self.gridArray[i] = [NSMutableArray array];
         for (int j = 0; j < GRID_COLUMNS; j++){
-//            CCNodeColor *_backgroundCell = [CCNodeColor nodeWithColor:[CCColor grayColor]];
-//            _backgroundCell.contentSize = CGSizeMake(_cellHeight-1, _cellWidth-1);
-//            _backgroundCell.position = ccp(x+1, y+1);
-//            [self addChild:_backgroundCell];
-//            self.gridArray[i][j] = [NSMutableArray array];
             self.gridArray[i][j] = [NSValue valueWithCGPoint:ccp(x+16, y+16)];
             x += _cellHeight;
         }

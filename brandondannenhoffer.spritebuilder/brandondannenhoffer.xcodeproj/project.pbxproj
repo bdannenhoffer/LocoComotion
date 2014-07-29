@@ -36,12 +36,25 @@
 		B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
+		F115B3891981A93D0064C3B7 /* NoTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F115B3881981A93D0064C3B7 /* NoTile.m */; };
 		F11A387619702ECB00866ABC /* PauseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F11A387519702ECB00866ABC /* PauseMenu.m */; };
 		F121EF1A1976E5AA00FCD686 /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = F121EF191976E5AA00FCD686 /* Level.m */; };
 		F121EF1D1977033100FCD686 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = F121EF1C1977033100FCD686 /* Tile.m */; };
 		F121EF21197704B300FCD686 /* TerrainTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F121EF20197704B300FCD686 /* TerrainTile.m */; };
+		F12EFFC81982B36800C50751 /* RockTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F12EFFC71982B36800C50751 /* RockTile.m */; };
+		F12EFFCF1982DF7200C50751 /* LoseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F12EFFCE1982DF7200C50751 /* LoseScene.m */; };
+		F1520E8F19868A2D00F75FF2 /* TrainTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = F1520E8E19868A2D00F75FF2 /* TrainTrack.m */; };
+		F1520E9519869AC500F75FF2 /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = F1520E9419869AC500F75FF2 /* Obstacle.m */; };
+		F18E4611197E9FBD0061DAF3 /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = F18E4610197E9FBD0061DAF3 /* Train.m */; };
 		F18FA54E196D87C5009CAC97 /* LevelSelectionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */; };
 		F18FA559196DE5B3009CAC97 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = F18FA558196DE5B3009CAC97 /* Gameplay.m */; };
+		F1959BDC1979A2B00070FE8E /* CrossTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F1959BDB1979A2B00070FE8E /* CrossTile.m */; };
+		F1959BE01979A2E30070FE8E /* LeftToBottomTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F1959BDF1979A2E30070FE8E /* LeftToBottomTile.m */; };
+		F1959BE31979A2FB0070FE8E /* LeftToRightTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F1959BE21979A2FB0070FE8E /* LeftToRightTile.m */; };
+		F1959BE61979A3160070FE8E /* RightToBottomTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F1959BE51979A3160070FE8E /* RightToBottomTile.m */; };
+		F1959BE91979A34E0070FE8E /* TopToLeftTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F1959BE81979A34E0070FE8E /* TopToLeftTile.m */; };
+		F1959BEC1979A3670070FE8E /* TopToRightTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F1959BEB1979A3670070FE8E /* TopToRightTile.m */; };
+		F1959BEF1979A3AA0070FE8E /* UpAndDownTile.m in Sources */ = {isa = PBXBuildFile; fileRef = F1959BEE1979A3AA0070FE8E /* UpAndDownTile.m */; };
 		F1992A93196EF3E200BD4CEF /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = F1992A92196EF3E200BD4CEF /* Grid.m */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +110,8 @@
 		B77F1B3F17B978D7009739AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B77F1B4117B978D7009739AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
+		F115B3871981A93D0064C3B7 /* NoTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoTile.h; sourceTree = "<group>"; };
+		F115B3881981A93D0064C3B7 /* NoTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoTile.m; sourceTree = "<group>"; };
 		F11A387419702ECB00866ABC /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseMenu.h; path = Source/PauseMenu.h; sourceTree = "<group>"; };
 		F11A387519702ECB00866ABC /* PauseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PauseMenu.m; path = Source/PauseMenu.m; sourceTree = "<group>"; };
 		F121EF181976E5AA00FCD686 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Level.h; path = Source/Level.h; sourceTree = "<group>"; };
@@ -105,10 +120,34 @@
 		F121EF1C1977033100FCD686 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tile.m; path = Source/Tile.m; sourceTree = "<group>"; };
 		F121EF1F197704B300FCD686 /* TerrainTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TerrainTile.h; path = Source/TerrainTile.h; sourceTree = "<group>"; };
 		F121EF20197704B300FCD686 /* TerrainTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TerrainTile.m; path = Source/TerrainTile.m; sourceTree = "<group>"; };
+		F12EFFC61982B36800C50751 /* RockTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockTile.h; sourceTree = "<group>"; };
+		F12EFFC71982B36800C50751 /* RockTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RockTile.m; sourceTree = "<group>"; };
+		F12EFFCD1982DF7200C50751 /* LoseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoseScene.h; sourceTree = "<group>"; };
+		F12EFFCE1982DF7200C50751 /* LoseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoseScene.m; sourceTree = "<group>"; };
+		F1520E8D19868A2D00F75FF2 /* TrainTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainTrack.h; sourceTree = "<group>"; };
+		F1520E8E19868A2D00F75FF2 /* TrainTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainTrack.m; sourceTree = "<group>"; };
+		F1520E9319869AC500F75FF2 /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
+		F1520E9419869AC500F75FF2 /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Obstacle.m; sourceTree = "<group>"; };
+		F18E460F197E9FBD0061DAF3 /* Train.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Train.h; sourceTree = "<group>"; };
+		F18E4610197E9FBD0061DAF3 /* Train.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Train.m; sourceTree = "<group>"; };
 		F18FA54C196D87C5009CAC97 /* LevelSelectionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelSelectionScene.h; path = Source/LevelSelectionScene.h; sourceTree = "<group>"; };
 		F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelSelectionScene.m; path = Source/LevelSelectionScene.m; sourceTree = "<group>"; };
 		F18FA557196DE5B3009CAC97 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gameplay.h; path = Source/Gameplay.h; sourceTree = "<group>"; };
 		F18FA558196DE5B3009CAC97 /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gameplay.m; path = Source/Gameplay.m; sourceTree = "<group>"; };
+		F1959BDA1979A2B00070FE8E /* CrossTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrossTile.h; path = Source/CrossTile.h; sourceTree = "<group>"; };
+		F1959BDB1979A2B00070FE8E /* CrossTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrossTile.m; path = Source/CrossTile.m; sourceTree = "<group>"; };
+		F1959BDE1979A2E30070FE8E /* LeftToBottomTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftToBottomTile.h; path = Source/LeftToBottomTile.h; sourceTree = "<group>"; };
+		F1959BDF1979A2E30070FE8E /* LeftToBottomTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftToBottomTile.m; path = Source/LeftToBottomTile.m; sourceTree = "<group>"; };
+		F1959BE11979A2FB0070FE8E /* LeftToRightTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftToRightTile.h; sourceTree = "<group>"; };
+		F1959BE21979A2FB0070FE8E /* LeftToRightTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftToRightTile.m; sourceTree = "<group>"; };
+		F1959BE41979A3160070FE8E /* RightToBottomTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightToBottomTile.h; sourceTree = "<group>"; };
+		F1959BE51979A3160070FE8E /* RightToBottomTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightToBottomTile.m; sourceTree = "<group>"; };
+		F1959BE71979A34E0070FE8E /* TopToLeftTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopToLeftTile.h; sourceTree = "<group>"; };
+		F1959BE81979A34E0070FE8E /* TopToLeftTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopToLeftTile.m; sourceTree = "<group>"; };
+		F1959BEA1979A3670070FE8E /* TopToRightTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopToRightTile.h; sourceTree = "<group>"; };
+		F1959BEB1979A3670070FE8E /* TopToRightTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopToRightTile.m; sourceTree = "<group>"; };
+		F1959BED1979A3AA0070FE8E /* UpAndDownTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpAndDownTile.h; sourceTree = "<group>"; };
+		F1959BEE1979A3AA0070FE8E /* UpAndDownTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpAndDownTile.m; sourceTree = "<group>"; };
 		F1992A91196EF3E200BD4CEF /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Grid.h; path = Source/Grid.h; sourceTree = "<group>"; };
 		F1992A92196EF3E200BD4CEF /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Grid.m; path = Source/Grid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,14 +186,19 @@
 			isa = PBXGroup;
 			children = (
 				F121EF1E1977046000FCD686 /* Tiles */,
+				F1FE35461987E06400F8CD80 /* Enemies */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
-				F18FA54C196D87C5009CAC97 /* LevelSelectionScene.h */,
 				F18FA54D196D87C5009CAC97 /* LevelSelectionScene.m */,
+				F18FA54C196D87C5009CAC97 /* LevelSelectionScene.h */,
 				F18FA557196DE5B3009CAC97 /* Gameplay.h */,
 				F18FA558196DE5B3009CAC97 /* Gameplay.m */,
+				F18E460F197E9FBD0061DAF3 /* Train.h */,
+				F18E4610197E9FBD0061DAF3 /* Train.m */,
+				F12EFFCD1982DF7200C50751 /* LoseScene.h */,
+				F12EFFCE1982DF7200C50751 /* LoseScene.m */,
 				F11A387419702ECB00866ABC /* PauseMenu.h */,
 				F11A387519702ECB00866ABC /* PauseMenu.m */,
 				F1992A91196EF3E200BD4CEF /* Grid.h */,
@@ -256,10 +300,55 @@
 			children = (
 				F121EF1B1977033100FCD686 /* Tile.h */,
 				F121EF1C1977033100FCD686 /* Tile.m */,
+				F115B3871981A93D0064C3B7 /* NoTile.h */,
+				F115B3881981A93D0064C3B7 /* NoTile.m */,
 				F121EF1F197704B300FCD686 /* TerrainTile.h */,
 				F121EF20197704B300FCD686 /* TerrainTile.m */,
+				F12EFFCB1982B47200C50751 /* Terrain */,
+				F12EFFCC1982B4B900C50751 /* Train Tracks */,
 			);
 			name = Tiles;
+			sourceTree = "<group>";
+		};
+		F12EFFCB1982B47200C50751 /* Terrain */ = {
+			isa = PBXGroup;
+			children = (
+				F1520E9319869AC500F75FF2 /* Obstacle.h */,
+				F1520E9419869AC500F75FF2 /* Obstacle.m */,
+				F12EFFC61982B36800C50751 /* RockTile.h */,
+				F12EFFC71982B36800C50751 /* RockTile.m */,
+			);
+			name = Terrain;
+			sourceTree = "<group>";
+		};
+		F12EFFCC1982B4B900C50751 /* Train Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				F1520E8D19868A2D00F75FF2 /* TrainTrack.h */,
+				F1520E8E19868A2D00F75FF2 /* TrainTrack.m */,
+				F1959BDA1979A2B00070FE8E /* CrossTile.h */,
+				F1959BDB1979A2B00070FE8E /* CrossTile.m */,
+				F1959BED1979A3AA0070FE8E /* UpAndDownTile.h */,
+				F1959BEE1979A3AA0070FE8E /* UpAndDownTile.m */,
+				F1959BDE1979A2E30070FE8E /* LeftToBottomTile.h */,
+				F1959BDF1979A2E30070FE8E /* LeftToBottomTile.m */,
+				F1959BE11979A2FB0070FE8E /* LeftToRightTile.h */,
+				F1959BE21979A2FB0070FE8E /* LeftToRightTile.m */,
+				F1959BE41979A3160070FE8E /* RightToBottomTile.h */,
+				F1959BE51979A3160070FE8E /* RightToBottomTile.m */,
+				F1959BE71979A34E0070FE8E /* TopToLeftTile.h */,
+				F1959BE81979A34E0070FE8E /* TopToLeftTile.m */,
+				F1959BEA1979A3670070FE8E /* TopToRightTile.h */,
+				F1959BEB1979A3670070FE8E /* TopToRightTile.m */,
+			);
+			name = "Train Tracks";
+			sourceTree = "<group>";
+		};
+		F1FE35461987E06400F8CD80 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Enemies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,16 +472,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18E4611197E9FBD0061DAF3 /* Train.m in Sources */,
+				F1959BE61979A3160070FE8E /* RightToBottomTile.m in Sources */,
 				F18FA54E196D87C5009CAC97 /* LevelSelectionScene.m in Sources */,
 				F121EF1D1977033100FCD686 /* Tile.m in Sources */,
+				F1959BE31979A2FB0070FE8E /* LeftToRightTile.m in Sources */,
 				F1992A93196EF3E200BD4CEF /* Grid.m in Sources */,
 				F121EF21197704B300FCD686 /* TerrainTile.m in Sources */,
 				F121EF1A1976E5AA00FCD686 /* Level.m in Sources */,
 				F11A387619702ECB00866ABC /* PauseMenu.m in Sources */,
+				F115B3891981A93D0064C3B7 /* NoTile.m in Sources */,
+				F12EFFC81982B36800C50751 /* RockTile.m in Sources */,
+				F12EFFCF1982DF7200C50751 /* LoseScene.m in Sources */,
+				F1520E8F19868A2D00F75FF2 /* TrainTrack.m in Sources */,
 				F18FA559196DE5B3009CAC97 /* Gameplay.m in Sources */,
+				F1520E9519869AC500F75FF2 /* Obstacle.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
+				F1959BDC1979A2B00070FE8E /* CrossTile.m in Sources */,
+				F1959BEF1979A3AA0070FE8E /* UpAndDownTile.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
+				F1959BE01979A2E30070FE8E /* LeftToBottomTile.m in Sources */,
+				F1959BEC1979A3670070FE8E /* TopToRightTile.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				F1959BE91979A34E0070FE8E /* TopToLeftTile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

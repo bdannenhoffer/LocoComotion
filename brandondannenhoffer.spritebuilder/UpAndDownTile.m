@@ -10,4 +10,13 @@
 
 @implementation UpAndDownTile
 
+-(void)didLoadFromCCB{
+    self.occupiable = NO;
+    self.nextRouteLeft = NO;
+    self.nextRouteRight = NO;
+    self.nextRouteBottom = YES;
+    self.nextRouteTop = YES;
+}
+
+
 @end

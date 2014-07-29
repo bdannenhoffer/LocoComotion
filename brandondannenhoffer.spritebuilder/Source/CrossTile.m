@@ -10,4 +10,13 @@
 
 @implementation CrossTile
 
+-(void)didLoadFromCCB{
+    self.occupiable = NO;
+    self.nextRouteLeft = YES;
+    self.nextRouteRight = YES;
+    self.nextRouteBottom = YES;
+    self.nextRouteTop = YES;
+}
+
+
 @end

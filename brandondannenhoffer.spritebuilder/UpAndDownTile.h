@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "Tile.h"
+#import "TrainTrack.h"
 
-@interface UpAndDownTile : Tile
+@interface UpAndDownTile : TrainTrack
 
 @end

@@ -10,4 +10,13 @@
 
 @implementation LeftToRightTile
 
+-(void)didLoadFromCCB{
+    self.occupiable = NO;
+    self.nextRouteLeft = YES;
+    self.nextRouteRight = YES;
+    self.nextRouteBottom = NO;
+    self.nextRouteTop = NO;
+}
+
+
 @end
